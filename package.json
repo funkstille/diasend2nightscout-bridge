@@ -1,31 +1,28 @@
 {
-  "name": "share2nightscout-bridge",
-  "version": "0.2.4",
-  "description": "Fetches data from Dexcom's webservice and puts it in Nightscout.",
+  "name": "diasend2nightscout-bridge",
+  "version": "0.1",
+  "description": "Fetches data from diasend webservice and puts it in Nightscout.",
   "main": "index.js",
   "scripts": {
     "test": "NODE_ENV=test mocha --timeout 30000 --exit -R tap 'tests/**/*.test.js'"
   },
-  "author": "Ben West",
+  "author": "Funk Stille
   "license": "GPL-3.0-only",
-  "dependencies": {
-    "request": "^2.88.0"
-  },
   "repository": {
     "type": "git",
-    "url": "git://github.com/nightscout/share2nightscout-bridge.git"
+    "url": "https://github.com/funkstille/diasend2nightscout-bridge.git"
   },
   "engines": {
-    "node": "12.x || 10.x || 8.x"
+    "node": "12.x || 10.x"
   },
   "keywords": [
-    "dexcom",
+    "diasend
     "bridge",
     "nightscout",
     "cgm"
   ],
   "bugs": {
-    "url": "https://github.com/nightscout/share2nightscout-bridge/issues"
+    "url": "https://github.com/funkstille/diasend2nightscout-bridge/issues"
   },
   "devDependencies": {
     "mocha": "^6.0.2",
