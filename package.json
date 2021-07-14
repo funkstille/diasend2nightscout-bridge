@@ -1,0 +1,34 @@
+{
+  "name": "share2nightscout-bridge",
+  "version": "0.2.4",
+  "description": "Fetches data from Dexcom's webservice and puts it in Nightscout.",
+  "main": "index.js",
+  "scripts": {
+    "test": "NODE_ENV=test mocha --timeout 30000 --exit -R tap 'tests/**/*.test.js'"
+  },
+  "author": "Ben West",
+  "license": "GPL-3.0-only",
+  "dependencies": {
+    "request": "^2.88.0"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git://github.com/nightscout/share2nightscout-bridge.git"
+  },
+  "engines": {
+    "node": "12.x || 10.x || 8.x"
+  },
+  "keywords": [
+    "dexcom",
+    "bridge",
+    "nightscout",
+    "cgm"
+  ],
+  "bugs": {
+    "url": "https://github.com/nightscout/share2nightscout-bridge/issues"
+  },
+  "devDependencies": {
+    "mocha": "^6.0.2",
+    "should": "^13.2.3"
+  }
+}
