@@ -1,42 +1,29 @@
 /**
- * Author: Ben West
- * https://github.com/bewest
- * Advisor: Scott Hanselman
- * http://www.hanselman.com/blog/BridgingDexcomShareCGMReceiversAndNightscout.aspx
- *
- * This program is free software: you can redistribute it and/or modify
- * it under the terms of the GNU General Public License as published by
- * the Free Software Foundation, either version 3 of the License, or
- * (at your option) any later version.
- * 
- * This program is distributed in the hope that it will be useful,
- * but WITHOUT ANY WARRANTY; without even the implied warranty of
- * MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the
- * GNU General Public License for more details.
- * 
- * You should have received a copy of the GNU General Public License
- * along with this program.  If not, see <http://www.gnu.org/licenses/>.
- * 
- *
- * @description: Allows user to store their Dexcom data in their own
- * Nightscout server by facilitating the transfer of latest records
- * from Dexcom's server into theirs.
+ * Author: Funk Stille
+ * https://github.com/funkstille
  */
 var request = require('request');
 var qs = require('querystring');
 var crypto = require('crypto');
-var meta = require('./package.json');
+//var meta = require('./package.json');
 
 
 // Defaults
-var server = "share2.dexcom.com";
-var bridge = readENV('BRIDGE_SERVER')
+var server = "api.diasend.com";
+var bridge = readENV('DIASEND_SERVER')
     if (bridge && bridge.indexOf(".") > 1) {
     server = bridge;
    } 
-    else if (bridge && bridge === 'EU') {
-        server = "shareous1.dexcom.com";
-    } 
+var diasend_client_id = "";
+var diasend_client_id_new = readENV('DIASEND_APP_CLIENT_ID')
+    if (diasend_client_id_new && diasend_client_id_new.indexOf(".") > 1) {
+    diasend_client_id = diasend_client_id_new;
+   } 
+var diasend_client_secret = "";
+var diasend_client_secret_new = readENV('DIASEND_APP_CLIENT_SECRET')
+    if (diasend_client_secret_new && diasend_client_secret_new.indexOf(".") > 1) {
+    diasend_client_secret = diasend_client_secret_new;
+   } 
 
 
 var Defaults = {
