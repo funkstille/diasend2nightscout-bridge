@@ -16,7 +16,7 @@
     "node": "12.x || 10.x"
   },
   "keywords": [
-    "diasend
+    "diasend",
     "bridge",
     "nightscout",
     "cgm"
