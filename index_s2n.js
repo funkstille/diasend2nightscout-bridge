@@ -14,16 +14,19 @@ var bridge = readENV('DIASEND_SERVER')
     if (bridge && bridge.indexOf(".") > 1) {
     server = bridge;
    } 
-var diasend_client_id = "";
+var diasend_client_id = "a486o3nvdu88cg0sos4cw8cccc0o0cg.api.diasend.com";
 var diasend_client_id_new = readENV('DIASEND_APP_CLIENT_ID')
     if (diasend_client_id_new && diasend_client_id_new.indexOf(".") > 1) {
     diasend_client_id = diasend_client_id_new;
    } 
-var diasend_client_secret = "";
+var diasend_client_secret = "8imoieg4pyos04s44okoooowkogsco4";
 var diasend_client_secret_new = readENV('DIASEND_APP_CLIENT_SECRET')
     if (diasend_client_secret_new && diasend_client_secret_new.indexOf(".") > 1) {
     diasend_client_secret = diasend_client_secret_new;
    } 
+var diasend_scope = "PATIENT DIASEND_MOBILE_DEVICE_DATA_RW";
+var diasend_oauth_url = "https://" + server + "/1/oauth2/token";
+var diasend_data_url = "https://" + server + "/1/patient/data#";
 
 
 var Defaults = {
