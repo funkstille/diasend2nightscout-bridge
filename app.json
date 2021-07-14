@@ -1,26 +1,41 @@
 {
-  "name": "Share to Nightscout Bridge",
-  "repository": "https://github.com/bewest/share2nightscout-bridge",
+  "name": "Diasend to Nightscout Bridge",
+  "repository": "https://github.com/funkstille/diasend2nightscout-bridge",
   "env": {
-    "API_SECRET": {
+    "API_SECRET_NS": {
       "description": "This must match the API_SECRET password from your Nightscout website.",
       "value": "",
       "required": true
     },
-    "DEXCOM_ACCOUNT_NAME": {
-      "description": "Dexcom Share2 user name.",
+    "DIASEND_ACCOUNT_NAME": {
+      "description": "DIASEND user name (E-Mail Address).",
       "value": "",
       "required": true
     },
-    "DEXCOM_PASSWORD": {
-      "description": "Dexcom Share2 password.",
+    "DIASEND_PASSWORD": {
+      "description": "DIASEND password.",
       "value": "",
       "required": true
     },
-    "WEBSITE_HOSTNAME": {
-      "description": "The host name for your Nightscout website.  Example: sitename.herokuapp.com or sitename.azurewebsites.net.  Do not include http:// or https://",
+    "NS_WEBSITE_HOSTNAME": {
+      "description": "The host name for your Nightscout website.  Example: sitename.herokuapp.com. Do not include http:// or https://",
       "value": "",
       "required": true
+    },
+    "DIASEND_Server": {
+      "description": "Diasend Server (api.diasend.com/1). Without Https or last slash",
+      "value": "",
+      "required": false
+    },    
+    "DIASEND_APP_CLIENT_ID": {
+      "description": "The Client ID used by the Diasend App, so we can mask ourselves as diasend app",
+      "value": "",
+      "required": false
+    },
+    "DIASEND_APP_CLIENT_SECRET": {
+      "description": "The Client Secret",
+      "value": "",
+      "required": false
     },
     "maxCount": {
       "description": "OPTIONAL: The maximum number of records to fetch per update.  Default: 1",
