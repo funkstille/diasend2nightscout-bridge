@@ -6,7 +6,7 @@
   "scripts": {
     "test": "NODE_ENV=test mocha --timeout 30000 --exit -R tap 'tests/**/*.test.js'"
   },
-  "author": "Funk Stille
+  "author": "Funk Stille",
   "license": "GPL-3.0-only",
   "repository": {
     "type": "git",
