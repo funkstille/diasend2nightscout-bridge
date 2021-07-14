@@ -5,7 +5,7 @@
 var request = require('request');
 var qs = require('querystring');
 var crypto = require('crypto');
-//var meta = require('./package.json');
+var meta = require('./package.json');
 
 
 // Defaults
@@ -42,35 +42,8 @@ var Defaults = {
 , MIN_PASSPHRASE_LENGTH: 12
 };
 
-var DIRECTIONS = {
-  NONE: 0
-, DoubleUp: 1
-, SingleUp: 2
-, FortyFiveUp: 3
-, Flat: 4
-, FortyFiveDown: 5
-, SingleDown: 6
-, DoubleDown: 7
-, 'NOT COMPUTABLE': 8
-, 'RATE OUT OF RANGE': 9
-};
-var Trends = (function ( ) {
-  var keys = Object.keys(DIRECTIONS);
-  var trends = keys.sort(function (a, b) {
-    return DIRECTIONS[a] - DIRECTIONS[b];
-  });
-  return trends;
-})( );
-function directionToTrend (direction) {
-  var trend = 8;
-  if (direction in DIRECTIONS) {
-    trend = DIRECTIONS[direction];
-  }
-  return trend;
-}
-function trendToDirection (trend) {
-  return Trends[trend] || Trends[0];
-}
+
+// Trends are not build in diasend
 
 // assemble the POST body for the login endpoint
 function login_payload (opts) {
@@ -83,6 +56,8 @@ function login_payload (opts) {
 }
 
 // Login to Dexcom's server.
+// Hier muss dann OAUTH2 hin
+
 function authorize (opts, then) {
   var url = opts.login || Defaults.login;
   var body = login_payload(opts);
@@ -97,6 +72,8 @@ function authorize (opts, then) {
 }
 
 // Assemble query string for fetching data.
+// Anpassen auf DIASEND
+
 function fetch_query (opts) {
   // ?sessionID=e59c836f-5aeb-4b95-afa2-39cf2769fede&minutes=1440&maxCount=1"
   var q = {
@@ -124,6 +101,8 @@ function fetch (opts, then) {
 }
 
 // Authenticate and fetch data from Dexcom.
+// umbauen auf DIASEND
+
 function do_everything (opts, then) {
   var login_opts = opts.login;
   var fetch_opts = opts.fetch;
@@ -139,6 +118,8 @@ function do_everything (opts, then) {
 }
 
 // Map Dexcom's property values to Nightscout's.
+// Umbau DIASEND
+
 function dex_to_entry (d) {
 /*
 [ { DT: '/Date(1426292016000-0700)/',
@@ -163,6 +144,7 @@ function dex_to_entry (d) {
 }
 
 // Record data into Nightscout.
+
 function report_to_nightscout (opts, then) {
   var shasum = crypto.createHash('sha1');
   var hash = shasum.update(opts.API_SECRET);
