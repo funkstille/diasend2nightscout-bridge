@@ -22,7 +22,7 @@
       "value": "",
       "required": true
     },
-    "DIASEND_Server": {
+    "DIASEND_SERVER": {
       "description": "Diasend Server (api.diasend.com/1). Without Https or last slash",
       "value": "",
       "required": false
