@@ -12,7 +12,7 @@ Because CamAPS FX and Diasend announced that the service will bei migrated to gl
 Glooko has an official API, which Diasend has not.
 So I htought it is better to invest time into glooko.
 But.... as always... the migration to glooko took way longer then I thougt.
-So in the meantime everything could habe been up and running.
+So in the meantime everything could have been up and running.
 </br></br>
 Is there an alternive?</br>
 yes and no, the latest nightly xdrip Verison (20220602) supports uploading data from CamAPS to Nightscout
