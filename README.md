@@ -5,7 +5,7 @@ Copied the code of dexcom2nightscout bridge
 change it / enhance it to receive data from diasend
 </br></br>
 Why?</br>
-Because CamAPS FX has only the ability to send data to diasend but I would like to use nightscout
+Because CamAPS FX (https://camdiab.com/) has only the ability to send data to diasend but I would like to use Nightscout.
 </br></br>
 So why not getting it done?</br>
 Because CamAPS FX and Diasend announced that the service will bei migrated to glooko.
