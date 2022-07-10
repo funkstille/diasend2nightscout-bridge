@@ -7,7 +7,7 @@ Why?</br>
 Because CamAPS FX (https://camdiab.com/) has only the ability to send data to diasend but I would like to use Nightscout.
 </br></br>
 So why not getting it done?</br>
-Because CamAPS FX and Diasend announced that the service will bei migrated to glooko.
+Because CamAPS FX and Diasend announced that the service will be migrated to glooko.
 Glooko has an official API, which diasend has not.
 So I thought it is better to invest time into glooko.
 But.... as always... the migration to glooko took way longer then I thought.
